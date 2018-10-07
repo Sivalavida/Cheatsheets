@@ -1,0 +1,32 @@
+Dataframes
+	Filtering
+		bond_data2_df[(bond_data2_df['yield'] < .25) &
+                     (bond_data2_df['rating_id'] > 1)]
+        bond_data2_df[bond_data2_df.country.isin(portfolio_1.country)]
+
+     Column Selection
+     	series = data['fitch_rating_id']
+     	df = data[['security_id', 'fitch_rating_id']]
+     reseting the index
+     	df.reset_index(drop=True, inplace=True)
+
+
+
+
+
+Series
+	Filtering
+		bond_data2_df.rating_id[lambda x:x!=1]
+
+
+
+Seaborn
+
+
+
+Matplotlib (Plotting)
+	Formatting
+		plt.xticks(size=15)
+		plt.xlabel('Rating', size = 15)
+		plt.yticks(size=15)
+		plt.ylabel('Yield', size = 15)
